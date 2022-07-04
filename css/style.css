@@ -24,35 +24,40 @@ h5 {
 body {
     background-color: rgba(255,255,255,0.8);
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     min-height: calc(100vh - 100px);
-    margin: 25px auto;
-    padding: 25px;
+    margin:  auto;
+    /* padding: 10px; */
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
-    border-radius: 4px;
+    border-radius: 2px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header {
-    padding: 20px;
-    height: 60px;
-    border-radius: 4px;
-    background-color: rgba(0,0,0,0.35);
+    min-height: 75px;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.99);
     color: rgba(255,255,255,0.9);
+    font-weight: 600;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.95);
     box-shadow:  inset 0 inset 0 -1px 0px rgba(255,255,255,1), inset 0 calc(1px * 1.2) calc(1px * 0.75) rgba(0,0,0,0.9), 0 0 1px calc(1px * 0.5) rgba(0,0,0,0.1);
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
-}
-
-.brand-bar {
+    justify-content: space-around;
     font-size: 1.5em;
 }
 
+
 nav {
-    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-bottom: 10px; */
 }
 
 nav > button > a {
@@ -61,19 +66,15 @@ nav > button > a {
 }
 
 nav > button > a::before {
-    /* font-family: "Font Awesome 6 Free"; */
     font: var(--fa-font-solid);
     content: "\f03d";
-
     margin-right: 10px;
     margin-left: -2px;
-    /* content: "\276E "; */
     color: white;
     background-color: black;
     padding: calc(10px * 1.0);
     padding-left: 15px;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 100px 250px;
+    border-radius: 2px;
 }
 
 nav > button > a::after {
@@ -85,11 +86,9 @@ nav > button > a::after {
 nav > button {
     padding: 5px 20px 5px 0px;
     border: solid 2px rgba(0,0,0,0.5);
-    border-radius: 20px;
-    border-bottom-right-radius: 100px 250px;
-    border-top-left-radius: 100px 250px;
+    border-radius: 2px;
     transition: all 300ms ease-in-out;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 nav > button:hover, nav > button.active {
@@ -106,21 +105,42 @@ nav > button > a:hover {
     color: rgba(255,255,255,0.75) !important;
 }
 
+.title-container {
+    /* margin-bottom: 20px; */
+    /* box-shadow: 0 1px 0 rgba(0,0,0,0.2); */
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
 .page-title {
     margin-left: 20px;
 }
 
+
 section {
-    width: 650px;
-    padding: 10px;
-    border-radius: 4px;
+    /* width: 650px;
+    padding: 10px; */
+    border-radius: 2px;
     text-align: justify;
+    overflow: hidden;
 }
 
 .homepage-hero-image {
-    width: 950px;
-    border-radius: 5px;
+    width:100%;
+    border-radius: 2px;
     filter: brightness(150%) grayscale(95%) opacity(90%);
+}
+
+.homepage-hero-section {
+    background-image: url('https://d279m997dpfwgl.cloudfront.net/wp/2020/12/GettyImages-1150049038.jpg');
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(150%) grayscale(95%) opacity(90%);
+    height: calc(100vh - 320px);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .over-screen-text {
@@ -129,11 +149,8 @@ section {
     text-shadow: 0 0 30px rgba(255,255,255,0.9);
     width: 500px;
     text-align: center;
-    font-size: 3.6em;
+    font-size: 3.5vw;
     font-weight: 700;
-    position: absolute;
-    left: 0;
-    margin: 100px 0 0 240px;
 }
 
 .movie-poster {
@@ -148,7 +165,7 @@ aside {
     width: 275px;
     background: rgba(0,0,0,0.0);
     padding: 2em 10px;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 ul > li {
@@ -178,4 +195,7 @@ ul > li > ul > li {
     margin-bottom: 50px;
 }
 article {}
-footer {}
+footer {
+    height: 100px;
+    background-color: rgba(0,0,0,0.99);
+}
