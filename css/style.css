@@ -31,6 +31,7 @@ body {
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
     border-radius: 4px;
     position: relative;
+    overflow: hidden;
 }
 
 header {
@@ -78,6 +79,7 @@ nav > button > a::before {
 nav > button > a::after {
     content: " \276F";
     margin-left: 5px;
+
 }
 
 nav > button {
@@ -92,7 +94,16 @@ nav > button {
 
 nav > button:hover, nav > button.active {
     border: solid 2px rgba(0,0,1);
-    background: rgba(255,255,255,0.99);
+    background: rgba(0,0,0,0.99);
+    color: rgba(255,255,255,0.75) !important;
+}
+
+nav > button > a {
+    color: inherit !important;
+}
+
+nav > button > a:hover {
+    color: rgba(255,255,255,0.75) !important;
 }
 
 .page-title {
